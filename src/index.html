@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="shortcut icon" href="#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text-Shape adherence evaluation</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./function.js"></script>
+  <script type="module" src="./script.js"></script>
+  <script type="module" src="./script2.js"></script>
+  <script type="module" src="./script3.js"></script>
+  <script type="text/javascript" src="human_test_set_final.json"></script>
+</head>
+
+<body onload="newSampleImages(); const userId = userIdSetup();"><main>
+
+<center><h1>Pick an object</h1></center>
+
+<h3><br><b>Please click on the object that best matches the text description</b></h3><br>
+Look for the object whose shape and appearance are better described by the text. If the text description does not allow you to choose one object over the other, click on the "I cannot decide between the two objects" box. 
+<br><b>REMARK:</b> You should select the “I cannot decide..” option in case you think that the text description is not informative enough to make a choice, i.e. it describes equivalently well both objects or does not describe sufficiently well any of the two.
+
+<br>
+
+<br>A new simulation is shown after each click, as an endless stream. You can stop at any time.
+<br>
+<i>Thanks a lot for your help!</i>
+</p>
+
+
+<hr>
+  <center><h3> <label style="height: 300px; width: 500px;" id="Text"></label></h3>
+    
+  
+  </center>
+  <table>
+    <tr>
+        <td id="container3D"></td>
+        <td id="container3D2"></td>
+        <td id="container3D3"></td>
+    </tr>
+    <tr>
+      <td><input id="ply0" type="submit" value="Valid description" onclick="clickImage('0')"/></td>
+      <td><input id="ply1" type="submit" value="Valid description" onclick="clickImage('1')"/></td>
+      <td><input id="ply2" type="submit" value="Valid description" onclick="clickImage('2')"/></td>
+  </tr>  
+</table>
+<div></div>
+<img id="img0" onclick="miao('0')" class="imgHover split left"/>
+<img id="img1" onclick="miao('1')" class="imgHover split right" />
+
+<div style="clear: both;"> </div>
+<div style="height: 3px; display: block;" > </div>
+<div style="clear: both;"> </div>
+
+<div id="plyNone" onclick="clickImage('none')" class="imgHover divNone">
+  <div class="textCenter">
+  <br><br>
+  <center><h4 > I cannot decide between the two objects. </h4></center>
+  </div>
+</div>
+
+<div style="clear: both;"> </div>
+<div style="height: 100px; display: block;" > </div>
+
+<hr>
+<small><i> This site uses an external Google service to record choices made by the users. You might have to disable tracker blockers (such as the Privacy Badger addon) for it to work. </i></small>
+<div style="clear: both;"> </div>
+<div style="height: 100px; display: block;" > </div>
+
+</main></body>
+</html>
